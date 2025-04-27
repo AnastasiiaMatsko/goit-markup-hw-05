@@ -248,7 +248,7 @@ button {
 .features_item {
     width: calc((100% - 24px * 3) / 4);
     width: 264px;
-    height: 104px;
+
 }
 .feature-svg{
     display: flex;
@@ -322,8 +322,6 @@ button {
 .team_svg {
     display: flex;
     justify-content: center;
-    max-width: 232px;
-    height: 40px;
     gap: 24px;
  
 }
@@ -403,15 +401,13 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ovrlay_conteiner:hover .ovrlay {
-    transform: translateY(0);
-}
+
 
 .app {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    margin-bottom: 8px;
+
 }
 
 .portfolio-title {
@@ -432,13 +428,14 @@ button {
 
 .portfolio-img:hover,
 .portfolio-img:focus {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    
 
 }
 
-.portfolio-img:hover .overlay,
-.portfolio-img:focus .overlay {
+.portfolio-img:hover .ovrlay,
+.portfolio-img:focus .ovrlay {
     transform: translateY(0%);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 /*#endregion portfolio*/
@@ -452,7 +449,7 @@ button {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-right: 120px;
+
 
 }
 .footer_info {
@@ -517,4 +514,266 @@ background-color: #31d0aa;
   fill: #f4f4fd;
 }
 
+.footer_form {
+    width: 453px;
+    height: 80px;
+    margin-left: 80px;
+}
+
+.subscribe_form {
+    display: flex;
+    gap: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.footer_form_lable {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.foter_form_input_email {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+}
+
+.footer_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px 8px 24px;
+    border-radius: 4px;
+    gap: 16px;
+    width: 165px;
+    height: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background: #4d5ae5;
+    border: none;
+    min-width: 165px;
+    cursor: pointer;
+    
+
+}
+
+.footer_form_svg {
+ 
+    fill: #fff;
+}
+.foter_form_input_email::placeholder {
+color: #fff;
+}
+
 /*#endregion footer*/
+
+
+
+/*#backdrop*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4); 
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+.backdrop.is-open {
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border-radius: 4px;
+    width: 408px;
+    min-height: 584px;
+
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+
+    transform: translate(-50%, -50%);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.backdrop_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 100%;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  
+}
+
+.backdrop_button:hover, 
+.backdrop_button:focus {
+    background-color: #404bbf;
+    fill: white;
+}
+.backdrop_button.backdrop_svg {
+    border-radius: 100%;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    fill: #2e2f42;
+ 
+}
+
+
+.backdrop_text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-top: 72px;
+}
+
+.backdrop_form {
+    display: grid;
+    transform: translate(24px, 16px);
+
+    border-radius: 4px;
+    width: 360px;
+    height: 336px;
+}
+
+.backdrop_label {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    width: 360px;
+    height: 58px;
+    gap: 4px;
+}
+
+.backdrop_input {
+    padding: 3px 0px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+}
+
+.backdrop_input:hover,
+.backdrop_input:focus {
+border: 1px solid #4d5ae5;
+border-radius: 4px;
+}
+.form_svg {
+    position: inherit;
+    top: -30px;
+    left: 16px;
+}
+.backdrop_textarea {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 120px;
+
+}
+.placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+
+
+.backdrop_span {
+    font-weight: 400;    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #4d5ae5;
+    line-height: 133%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.checkbox_text {
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+.backdrop_submit {
+    position: absolute;
+    bottom: 24px;
+    left: 119px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5;
+
+}
+.backdrop_button_text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+}
+
+.backdrop_checkbox_svg {
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+}
+.backdrop_checkbox_svg:hover,
+.backdrop_checkbox_svg:focus { 
+ background-color: #f4f4fd;
+}
+/*#endcackdrop*/
