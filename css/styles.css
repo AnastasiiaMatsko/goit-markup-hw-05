@@ -778,7 +778,6 @@ color: #ffffff;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: inline-flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
@@ -796,7 +795,7 @@ color: #ffffff;
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
-
+    
 }
 
 .backdrop_span:hover,
