@@ -694,10 +694,11 @@ color: #ffffff;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 .input-container {
     position: relative;
+    margin-bottom: 8px;
 }
 .backdrop_input {
     width: 100%;
@@ -765,7 +766,13 @@ color: #ffffff;
     font-size: 100%;
     line-height: 1.15;
 }
-
+.input-checkbox:checked ~ .label-user-privacy .backdrop_span {
+    background-color: #404bbf;
+    border: none;
+}
+.input-checkbox:checked ~ .label-user-privacy .backdrop_checkbox_svg {
+    fill: #f4f4fd;
+}
 .label-user-privacy {
     font-size: 12px;
     line-height: 1.17;
