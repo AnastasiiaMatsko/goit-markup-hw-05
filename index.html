@@ -556,11 +556,11 @@
         <div class="footer_form">
           <p class="footer_list_link">Subscribe</p>
           <form class="subscribe_form" name="subscribe_form">
-            <label class="footer_form_lable">
+            <label class="footer_form_label" for="user-email">
               <input
-                class="foter_form_input_email"
+                class="footer_form_input_email"
                 type="email"
-                name="user_email"
+                name="user-email"
                 placeholder="E-mail"
               />
             </label>
@@ -592,48 +592,45 @@
 
         <form class="backdrop_form">
           <div class="form_wrapper">
-            <div class="backdrop_form_wrapper">
-              <label class="backdrop_label" for="user-name">Name</label>
-              <div class="input-container">
-                <input
-                  id="user-name"
-                  name="user-name"
-                  type="text"
-                  class="backdrop_input"
-                />
-                <svg class="form_svg" width="18" height="24">
-                  <use href="./images/icons.svg#icon-person"></use>
-                </svg>
-              </div>
+            <label class="backdrop_label" for="user-name">Name</label>
+            <div class="input-container">
+              <input
+                id="user-name"
+                name="user-name"
+                type="text"
+                class="backdrop_input"
+              />
+              <svg class="form_svg" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
             </div>
-            <div class="backdrop_form_wrapper">
-              <label class="backdrop_label" for="user-phone">Phone</label>
-              <div class="input-container">
-                <input
-                  class="backdrop_input"
-                  type="tel"
-                  name="user-phone"
-                  id="user-phone"
-                />
-                <svg class="form_svg" width="18" height="24">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-              </div>
+
+            <label class="backdrop_label" for="user-phone">Phone</label>
+            <div class="input-container">
+              <input
+                class="backdrop_input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="form_svg" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
             </div>
-            <div class="backdrop_form_wrapper">
-              <label class="backdrop_label" for="user-email">Email</label>
-              <div class="input-container">
-                <input
-                  class="backdrop_input"
-                  type="email"
-                  name="user-email"
-                  id="user-email"
-                />
-                <svg class="form_svg" width="18" height="24">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-              </div>
+
+            <label class="backdrop_label" for="user-email">Email</label>
+            <div class="input-container">
+              <input
+                class="backdrop_input"
+                type="email"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="form_svg" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
             </div>
+
             <div class="textarea-container">
               <label class="backdrop_label" for="user-comment">Comment</label>
               <div class="backdrop_textarea_container">
@@ -645,6 +642,7 @@
                 ></textarea>
               </div>
             </div>
+
             <div class="checkbox">
               <input
                 class="input-checkbox visually-hidden"

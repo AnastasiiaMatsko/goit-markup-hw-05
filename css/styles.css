@@ -528,7 +528,7 @@ background-color: #31d0aa;
     color: #fff;
 }
 
-.footer_form_lable {
+.footer_form_label {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
@@ -540,7 +540,7 @@ background-color: #31d0aa;
     color: #fff;
 }
 
-.foter_form_input_email {
+.footer_form_input_email {
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
@@ -580,8 +580,8 @@ background-color: #31d0aa;
 }
 
 .footer_form_svg {
- 
     fill: #fff;
+    margin-left: 16px;
 }
 .foter_form_input_email::placeholder {
 color: #ffffff;
